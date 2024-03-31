@@ -21,10 +21,5 @@ def video_feed():
     return Response(gen(pi_camera),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
-@app.route('/picture')
-def take_picture():
-    pi_camera.take_picture()
-    return "None"
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=False)
