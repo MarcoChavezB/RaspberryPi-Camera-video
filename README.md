@@ -37,7 +37,8 @@ sudo pip3 install opencv-python
 ## Instalación de dependencias adicionales
 
 ```bash
-sudo apt install python3-pip (Necesario si es version lite)
+(Necesario si es version lite)
+sudo apt install python3-pip
 
 sudo pip3 install flask
 sudo pip3 install numpy
