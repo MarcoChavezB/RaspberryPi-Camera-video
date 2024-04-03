@@ -29,6 +29,10 @@ sudo apt-get install libopencv-dev python3-opencv
 ## Instalación de OpenCV
 
 ```bash
+
+(Necesario si es version lite)
+sudo apt install python3-pip
+
 sudo pip3 install opencv-contrib-python
 sudo pip3 install imutils
 sudo pip3 install opencv-python
