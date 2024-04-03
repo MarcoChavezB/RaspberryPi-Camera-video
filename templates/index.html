@@ -4,6 +4,28 @@
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+.camera-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+
+    /* Full height */
+  height: 100%;
+
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
 body {
     margin: 0;
     padding: 0;
