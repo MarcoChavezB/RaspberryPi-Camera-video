@@ -1,28 +1,23 @@
 import cv2 as cv
-from imutils.video.pivideostream import PiVideoStream
-import imutils
+from picamera import PiCamera
+from picamera.array import PiRGBArray
 import time
-from datetime import datetime
 import numpy as np
 
 class VideoCamera(object):
     def __init__(self, flip=False, file_type=".jpg", photo_string="stream_photo"):
-        self.vs = PiVideoStream().start()
-        self.flip = flip 
-        self.file_type = file_type
-        self.photo_string = photo_string
+        self.camera = PiCamera()
+        self.camera.resolution = (320, 240)
+        self.camera.framerate = 32  
+        self.rawCapture = PiRGBArray(self.camera, size=(320, 240))
         time.sleep(2.0)
 
     def __del__(self):
-        self.vs.stop()
-
-    def flip_if_needed(self, frame):
-        if self.flip:
-            return np.flip(frame, 0)
-        return frame
+        self.camera.close()
 
     def get_frame(self):
-        frame = self.flip_if_needed(self.vs.read())
-        ret, jpeg = cv.imencode(self.file_type, frame)
-        self.previous_frame = jpeg
-        return jpeg.tobytes()
+        for frame in self.camera.capture_continuous(self.rawCapture, format="bgr", use_video_port=True):
+            frame = frame.array
+            ret, jpeg = cv.imencode('.jpg', frame)
+            self.rawCapture.truncate(0)
+            return jpeg.tobytes()
