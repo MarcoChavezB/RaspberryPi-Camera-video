@@ -20,7 +20,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 sudo apt-get install libatlas-base-dev
- - sudo apt-get install libjasper-dev
+sudo apt-get install libjasper-dev
 sudo apt-get install libhdf5-dev
 
 sudo apt-get install libopencv-dev python3-opencv
