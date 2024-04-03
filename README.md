@@ -2,6 +2,16 @@
 
 Instrucciones para configurar y utilizar la cámara en Raspberry Pi para grabación de video.
 
+## Configuracion Raspi-camera
+
+```bash
+sudo raspi-config
+  - interface options
+    Legacy Camera [Enabled]
+    VNC [Enabled]
+```
+
+
 ## Requisitos previos
 Asegúrate de haber actualizado tu sistema y haber instalado las siguientes dependencias:
 
