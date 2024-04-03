@@ -9,7 +9,7 @@ class VideoCamera(object):
         self.camera = PiCamera()
         self.camera.resolution = (160, 120)
         self.camera.framerate = 10 
-        self.rawCapture = PiRGBArray(self.camera, size=(320, 240))
+        self.rawCapture = PiRGBArray(self.camera, size=(160, 120))
         time.sleep(2.0)
 
     def __del__(self):
