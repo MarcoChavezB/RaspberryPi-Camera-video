@@ -41,6 +41,9 @@ sudo apt install python3-pip (Necesario si es version lite)
 
 sudo pip3 install flask
 sudo pip3 install numpy
+sudo pip3 install imutils
+sudo pip3 install picamera[array]
+
 ```
 
 ## Notas importantes
