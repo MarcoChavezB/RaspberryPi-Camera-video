@@ -54,3 +54,9 @@ Deprecated: Las siguientes dependencias están obsoletas y no necesitan ser inst
 
 ## Uso
 Una vez instaladas las dependencias navegamos hasta el directorio RaspberryPi-Camera-video y ejecutamos main.py
+
+
+```bash
+![Captura desde 2024-04-02 23-26-18](https://github.com/MarcoChavezB/RaspberryPi-Camera-video/assets/123757334/d547ca0f-2ed3-432a-8f57-debbd7e496f7)
+
+```
