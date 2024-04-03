@@ -7,10 +7,11 @@ import numpy as np
 class VideoCamera(object):
     def __init__(self, flip=False, file_type=".jpg", photo_string="stream_photo"):
         self.camera = PiCamera()
-        self.camera.resolution = (160, 120)
+        self.camera.resolution = (160, 128)
         self.camera.framerate = 40 
-        self.rawCapture = PiRGBArray(self.camera, size=(160, 120))
+        self.rawCapture = PiRGBArray(self.camera, size=(160, 128))
         time.sleep(2.0)
+
 
     def __del__(self):
         self.camera.close()
