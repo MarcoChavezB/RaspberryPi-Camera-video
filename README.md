@@ -35,3 +35,7 @@ sudo pip3 install numpy
 Deprecated: Las siguientes dependencias están obsoletas y no necesitan ser instaladas:
 - libqtgui4
 - libqt4-test
+
+
+## Uso
+Una vez instaladas las dependencias navegamos hasta el directorio RaspberryPi-Camera-video y ejecutamos main.py
