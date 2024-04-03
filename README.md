@@ -7,8 +7,8 @@ Instrucciones para configurar y utilizar la cámara en Raspberry Pi para grabaci
 ```bash
 sudo raspi-config
   - interface options
-    Legacy Camera [Enabled]
-    VNC [Enabled]
+      Legacy Camera [Enabled]
+      VNC [Enabled]
 ```
 
 
