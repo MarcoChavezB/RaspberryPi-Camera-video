@@ -16,7 +16,7 @@ class VideoCamera(object):
         self.camera.close()
 
     def get_frame(self):
-        for frame in self.camera.capture_continuous(self.rawCapture, format="bgr", use_video_port=True):
+        for frame in self.camera.capture_continuous(self.rawCapture, format="jpeg", use_video_port=True):
             frame = frame.array
             ret, jpeg = cv.imencode('.jpg', frame)
             self.rawCapture.truncate(0)
